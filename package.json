@@ -1,0 +1,38 @@
+{
+  "name": "clipman",
+  "version": "0.0.1",
+  "description": "An application for recording, and storing content from system clipboard.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build",
+    "prebuild": "npm run clean",
+    "build": "npm run build:html && npm run build:css",
+    "build:html": "jade --pretty src/views/*.jade --out ./build/views",
+    "build:css": "lessc src/styles/index.less ./build/styles/stylesheet.css",
+    "start": "npm run build && electron .",
+    "start:watch": "watch 'npm run start' ./src"
+  },
+  "keywords": [
+    "Clipman",
+    "Clipboard Manager",
+    "React",
+    "Jade",
+    "Less"
+  ],
+  "author": "Sai Kishore Komanduri",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.6",
+    "jade": "^1.11.0",
+    "jade-cli": "^0.1.1",
+    "less": "^2.6.1",
+    "watch": "^0.17.1"
+  },
+  "dependencies": {
+    "react": "^15.0.1",
+    "react-dnd": "^2.1.4",
+    "react-dom": "^15.0.1",
+    "underscore": "^1.8.3"
+  }
+}
