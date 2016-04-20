@@ -22,6 +22,10 @@
   ],
   "author": "Sai Kishore Komanduri",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatman-/clipman.git"
+  },
   "devDependencies": {
     "electron-prebuilt": "^0.37.6",
     "jade": "^1.11.0",
